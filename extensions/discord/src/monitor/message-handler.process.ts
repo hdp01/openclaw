@@ -617,7 +617,7 @@ export async function processDiscordMessage(
   if (shouldLogVerbose()) {
     const finalCount = dispatchResult.settledReceipt?.counts.final.delivered ?? 0;
     logVerbose(
-      `discord: delivered ${finalCount} repl${finalCount === 1 ? "y" : "ies"} to ${replyTarget}`,
+      `discord: delivered ${finalCount} reply${finalCount === 1 ? "" : "ies"} to ${replyTarget}`,
     );
   }
 }
